@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="Loto.UIJogo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Loto"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"    
+    xmlns:Charting="using:WinRTXamlToolkit.Controls.DataVisualization.Charting"
+    mc:Ignorable="d">
+
+    <Grid Background="#2A95BF">
+        <StackPanel HorizontalAlignment="Left" Padding="100" Orientation="Horizontal" >
+            <StackPanel HorizontalAlignment="Left">
+                <TextBlock x:Name="lblNomeJogo" FontFamily="Segoe UI Light" FontSize="46" Margin="10,2,4,10" Foreground="White">NomeLoto</TextBlock>
+                <TextBox x:Name="txtJogo" Width="300" PlaceholderText="Informe novo jogo" Margin="0,0,0,10" Foreground="White"></TextBox>
+                <Button x:Name="btnJogar" Width="300" Margin="0,8,0,0" Foreground="White">Jogar</Button>
+                <Button x:Name="btnJogarAleatorio" Width="300" Margin="0,8,0,0" Foreground="White">Jogo aleatório</Button>
+                <Button x:Name="btnJogoFavrito" Width="300" Margin="0,8,0,0" Foreground="White">Usar jogo favorito</Button>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left">
+                <TextBlock FontFamily="Segoe UI Light" FontSize="40" Margin="10,2,4,10" Foreground="White">Top</TextBlock>
+                <Charting:Chart 
+                    x:Name="chartTopPie" 
+                    HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" 
+                    Margin="0">
+                    <Charting:PieSeries 
+                        Margin="0" 
+                        IndependentValuePath="Name" 
+                        DependentValuePath="Amount" 
+                        IsSelectionEnabled="True"/>
+                </Charting:Chart>
+            </StackPanel>
+        </StackPanel>        
+    </Grid>
+</Page>
