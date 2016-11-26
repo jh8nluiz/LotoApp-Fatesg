@@ -26,5 +26,10 @@ namespace Loto
         {
             this.InitializeComponent();
         }
+
+        private void btnLotoFacil_Click(object sender, RoutedEventArgs e)
+        {         
+            
+        }
     }
 }

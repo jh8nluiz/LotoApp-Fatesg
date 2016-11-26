@@ -6,51 +6,37 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Dictionary1.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
 
     <Grid Background="#2A95BF">
         <StackPanel HorizontalAlignment="Left" Padding="100" Orientation="Horizontal" >
             <StackPanel HorizontalAlignment="Left">
                 <TextBlock FontFamily="Segoe UI Light" FontSize="46" Margin="10,2,4,10" Foreground="White">Loterias</TextBlock>
                 <Grid Padding="30">
+                    <Grid.Background>
+                        <ImageBrush Stretch="Fill"/>
+                    </Grid.Background>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>                        
+                        <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition />
                         <RowDefinition />
-                        <RowDefinition />                       
+                        <RowDefinition />
                     </Grid.RowDefinitions>
-                    <Button x:Name="btnLotoFacil" Grid.Column="0" Grid.Row="0" Height="92" Width="220" Margin="0,0,10,10">
-                        <Button.Background>
-                            <ImageBrush ImageSource="/Assets/Images/imgButtonLotoFacil.png" />
-                        </Button.Background>
-                    </Button>
-                    <Button x:Name="btnLotoMania" Grid.Column="0" Grid.Row="1" Height="92" Width="220" Margin="0,0,10,10">
-                        <Button.Background>
-                            <ImageBrush ImageSource="/Assets/Images/imgButtonLotoMania.png" />
-                        </Button.Background>
-                    </Button>
-                    <Button x:Name="btnTimeMania" Grid.Column="0" Grid.Row="2" Height="92" Width="220" Margin="0,0,10,10">
-                        <Button.Background>
-                            <ImageBrush ImageSource="/Assets/Images/imgButtonTimeMania.png" />
-                        </Button.Background>
-                    </Button>
-                    <Button x:Name="btnMegaSena" Grid.Column="1" Grid.Row="0" Height="92" Width="220" Margin="0,0,10,10">
-                        <Button.Background>
-                            <ImageBrush ImageSource="/Assets/Images/imgButtonMegaSena.png" />
-                        </Button.Background>
-                    </Button>
-                    <Button x:Name="btnQuina" Grid.Column="1" Grid.Row="1" Height="92" Width="220" Margin="0,0,10,10">
-                        <Button.Background>
-                            <ImageBrush ImageSource="/Assets/Images/imgButtonQuina.png" />
-                        </Button.Background>
-                    </Button>
-                    <Button x:Name="btnDuplaSena" Grid.Column="1" Grid.Row="2" Height="92" Width="220" Margin="0,0,10,10">
-                        <Button.Background>
-                            <ImageBrush ImageSource="/Assets/Images/imgButtonDuplaSena.png" />
-                        </Button.Background>
-                    </Button>
+                    <Button x:Name="btnLotoFacil" Grid.Column="0" Grid.Row="0" Height="92" Width="220" Margin="0,0,10,10" Style="{StaticResource EstiloLotoFacil}" Click="btnLotoFacil_Click"></Button>
+                    <Button x:Name="btnLotoMania" Grid.Column="0" Grid.Row="1" Height="92" Width="220" Margin="0,0,10,10" Style="{StaticResource EstiloLotoMania}"></Button>
+                    <Button x:Name="btnTimeMania" Grid.Column="0" Grid.Row="2" Height="92" Width="220" Margin="0,0,10,10" Style="{StaticResource EstiloTimeMania}"></Button>
+                    <Button x:Name="btnMegaSena" Grid.Column="1" Grid.Row="0" Height="92" Width="220" Margin="0,0,10,10" Style="{StaticResource EstiloMegaSena}"></Button>
+                    <Button x:Name="btnQuina" Grid.Column="1" Grid.Row="1" Height="92" Width="220" Margin="0,0,10,10" Style="{StaticResource EstiloQuina}"></Button>
+                    <Button x:Name="btnDuplaSena" Grid.Column="1" Grid.Row="2" Height="92" Width="220" Margin="0,0,10,10" Style="{StaticResource EstiloDuplaSena}"></Button>
                 </Grid>
             </StackPanel>
             <StackPanel HorizontalAlignment="Left">
