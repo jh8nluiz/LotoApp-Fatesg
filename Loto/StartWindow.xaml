@@ -41,6 +41,16 @@
             </StackPanel>
             <StackPanel HorizontalAlignment="Left">
                 <TextBlock FontFamily="Segoe UI Light" FontSize="46" Margin="10,2,4,10" Foreground="White">Jogos</TextBlock>
+                <ListView x:Name="JogosList" Width="440" Padding="30">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="x:String">
+                            <StackPanel Orientation="Vertical" >
+                                <TextBlock Text="{Binding TipoJogo}" FontSize="32" Foreground="White"/>
+                                <TextBlock Text="{Binding Resultado}" FontSize="25" Foreground="White"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </StackPanel>
         </StackPanel>
     </Grid>

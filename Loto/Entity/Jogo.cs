@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace Loto.Entity
 {
-    class EnumTipoJogo
+    public class Jogo
     {
-        enum TipoJogo
-        {
-            
-        }
+        public string TipoJogo { get; set; }
+        public string Resultado { get; set; }
     }
 }
