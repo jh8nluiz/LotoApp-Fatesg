@@ -98,6 +98,7 @@
     <Compile Include="Entity\EnumTipoJogo.cs" />
     <Compile Include="Entity\Jogo.cs" />
     <Compile Include="JsonWebClient.cs" />
+    <Compile Include="Model.cs" />
     <Compile Include="StartWindow.xaml.cs">
       <DependentUpon>StartWindow.xaml</DependentUpon>
     </Compile>
@@ -151,6 +152,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Microsoft.VCLibs.120, Version=14.0">
+      <Name>Microsoft Visual C++ 2013 Runtime Package for Windows Universal</Name>
+    </SDKReference>
+    <SDKReference Include="SQLite.UWP.2015, Version=3.15.2">
+      <Name>SQLite for Universal Windows Platform</Name>
+    </SDKReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

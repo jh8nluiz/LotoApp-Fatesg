@@ -64,26 +64,31 @@ namespace Loto
         private void btnLotoFacil_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(UIJogo), EnumTipoJogo.TipoJogo.LOTOFACIL);
+            buscarJogos();
         }
 
         private void btnLotoMania_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(UIJogo), EnumTipoJogo.TipoJogo.LOTOMANIA);
+            buscarJogos();
         }
 
         private void btnDuplaSena_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(UIJogo), EnumTipoJogo.TipoJogo.DUPLASENA);
+            buscarJogos();
         }
 
         private void btnQuina_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(UIJogo), EnumTipoJogo.TipoJogo.QUINA);
+            buscarJogos();
         }
 
         private void btnTimeMania_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(UIJogo), EnumTipoJogo.TipoJogo.TIMEMANIA);            
+            this.Frame.Navigate(typeof(UIJogo), EnumTipoJogo.TipoJogo.TIMEMANIA);
+            buscarJogos();
         }
 
         private async Task<Entity.Jogo> buscarJogo(string tipoJogo)

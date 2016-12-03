@@ -19,7 +19,7 @@
                 <StackPanel HorizontalAlignment="Left">
                     <TextBlock x:Name="lblNomeJogo" FontFamily="Segoe UI Light" FontSize="46" Margin="10,2,4,10" Foreground="White">NomeLoto</TextBlock>
                     <TextBox x:Name="txtJogo" Width="300" PlaceholderText="Informe novo jogo" Margin="0,0,0,10" Foreground="White"></TextBox>
-                    <Button x:Name="btnJogar" Width="300" Margin="0,8,0,0" Foreground="White">Jogar</Button>
+                    <Button x:Name="btnJogar" Width="300" Margin="0,8,0,0" Foreground="White" Click="btnJogar_Click">Jogar</Button>
                     <Button x:Name="btnJogarAleatorio" Width="300" Margin="0,8,0,0" Foreground="White">Jogo aleatório</Button>
                     <Button x:Name="btnJogoFavrito" Width="300" Margin="0,8,0,0" Foreground="White">Usar jogo favorito</Button>
                 </StackPanel>
