@@ -45,6 +45,7 @@ namespace Loto
             Entity.Jogo quina = await buscarJogo("quina");
             Entity.Jogo timeMania = await buscarJogo("timemania");
             Entity.Jogo duplaSena = await buscarJogo("duplasena");
+        }
 
         private void btnLotoMania_Click(object sender, RoutedEventArgs e)
         {
@@ -63,8 +64,7 @@ namespace Loto
 
         private void btnTimeMania_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(UIJogo), EnumTipoJogo.TipoJogo.TIMEMANIA);
-            Frame.Navigate(typeof(UIJogo), EnumTipoJogo.TipoJogo.TIMEMANIA);
+            Frame.Navigate(typeof(UIJogo), EnumTipoJogo.TipoJogo.TIMEMANIA);            
         }
 
         private async Task<Entity.Jogo> buscarJogo(string tipoJogo)
