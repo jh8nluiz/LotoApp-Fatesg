@@ -36,7 +36,8 @@ namespace Loto
         }
 
         private void btnLotoFacil_Click(object sender, RoutedEventArgs e)
-        {         
+        {
+            UIJogo lotoFacil = new UIJogo();
             
         }
     }
