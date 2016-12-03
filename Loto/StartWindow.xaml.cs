@@ -50,6 +50,15 @@ namespace Loto
             Entity.Jogo quina = await buscarJogo("quina");
             Entity.Jogo timeMania = await buscarJogo("timemania");
             Entity.Jogo duplaSena = await buscarJogo("duplasena");
+
+            listJogos.Add(lotoFacil);
+            listJogos.Add(megaSena);
+            listJogos.Add(lotoMania);
+            listJogos.Add(quina);
+            listJogos.Add(timeMania);
+            listJogos.Add(duplaSena);
+
+            JogosList.ItemsSource = listJogos;
         }
 
         private void btnLotoFacil_Click(object sender, RoutedEventArgs e)
