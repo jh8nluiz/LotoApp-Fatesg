@@ -10,7 +10,12 @@ namespace Loto.Entity
     {
         enum TipoJogo
         {
-            
+            LOTOFACIL,
+            MEGASENA,
+            LOTOMANIA,
+            QUINA,
+            TIMEMANIA,
+            DUPLASENA
         }
     }
 }
