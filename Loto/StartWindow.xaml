@@ -31,7 +31,7 @@
                         <RowDefinition />
                         <RowDefinition />
                     </Grid.RowDefinitions>
-                    <Button x:Name="btnLotoFacil" Grid.Column="0" Grid.Row="0" Height="92" Width="220" Margin="0,0,10,10" Style="{StaticResource EstiloLotoFacil}"/>
+                    <Button x:Name="btnLotoFacil" Grid.Column="0" Grid.Row="0" Height="92" Width="220" Margin="0,0,10,10" Style="{StaticResource EstiloLotoFacil}" Click="btnLotoFacil_Click"/>
                     <Button x:Name="btnLotoMania" Grid.Column="0" Grid.Row="1" Height="92" Width="220" Margin="0,0,10,10" Style="{StaticResource EstiloLotoMania}"></Button>
                     <Button x:Name="btnTimeMania" Grid.Column="0" Grid.Row="2" Height="92" Width="220" Margin="0,0,10,10" Style="{StaticResource EstiloTimeMania}"></Button>
                     <Button x:Name="btnMegaSena" Grid.Column="1" Grid.Row="0" Height="92" Width="220" Margin="0,0,10,10" Style="{StaticResource EstiloMegaSena}"></Button>
@@ -46,8 +46,8 @@
                     <ListView.ItemTemplate>
                         <DataTemplate x:DataType="x:String">
                             <StackPanel Orientation="Vertical" >
-                                <TextBlock Text="{Binding TipoJogo}" FontSize="32" Foreground="White"/>
-                                <TextBlock Text="{Binding Resultado}" FontSize="25" Foreground="White"/>
+                                 <TextBlock Text="{Binding TipoJogo}" FontSize="32" Foreground="White"/>
+                                 <TextBox Text="{Binding Resultado}" FontSize="25" Foreground="White" Width="410" />
                             </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>

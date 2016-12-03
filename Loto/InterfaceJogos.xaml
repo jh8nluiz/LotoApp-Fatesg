@@ -8,7 +8,12 @@
     xmlns:Charting="using:WinRTXamlToolkit.Controls.DataVisualization.Charting"
     mc:Ignorable="d">
 
-    <Grid Background="#2A95BF">
+    <StackPanel Background="#2A95BF" VerticalAlignment="Top">
+        <Button x:Name="btnVoltar" Height="35" Width="38" Click="btnVoltar_Click">
+            <Button.Background>
+                <ImageBrush Stretch="Fill" ImageSource="Assets/Images/arrow.png"/>
+            </Button.Background>
+        </Button>
         <StackPanel HorizontalAlignment="Left" Padding="100" Orientation="Horizontal" >
             <StackPanel HorizontalAlignment="Left">
                 <TextBlock x:Name="lblNomeJogo" FontFamily="Segoe UI Light" FontSize="46" Margin="10,2,4,10" Foreground="White">NomeLoto</TextBlock>
@@ -32,5 +37,5 @@
                 </Charting:Chart>
             </StackPanel>
         </StackPanel>        
-    </Grid>
+    </StackPanel>
 </Page>

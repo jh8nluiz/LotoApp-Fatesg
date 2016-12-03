@@ -27,5 +27,50 @@ namespace Loto
         {
             this.InitializeComponent();
         }
+
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            var tipoJogo = (EnumTipoJogo.TipoJogo)e.Parameter;
+           
+            if (tipoJogo.Equals(EnumTipoJogo.TipoJogo.LOTOFACIL))
+            {
+                lblNomeJogo.Text = "Lotofácil";
+            } else
+            {
+                if (tipoJogo.Equals(EnumTipoJogo.TipoJogo.DUPLASENA))
+                {
+                    lblNomeJogo.Text = "Duplasena";
+                } else
+                {
+                    if (tipoJogo.Equals(EnumTipoJogo.TipoJogo.LOTOMANIA))
+                    {
+                        lblNomeJogo.Text = "Lotomania";
+                    } else
+                    {
+                        if (tipoJogo.Equals(EnumTipoJogo.TipoJogo.MEGASENA))
+                        {
+                            lblNomeJogo.Text = "Megasena";
+                        } else
+                        {
+                            if (tipoJogo.Equals(EnumTipoJogo.TipoJogo.QUINA))
+                            {
+                                lblNomeJogo.Text = "Quina";
+                            } else
+                            {
+                                lblNomeJogo.Text = "Timemania";
+                            }
+                        }
+                    }
+                }
+            }
+            
+           
+
+        }
+
+        private void btnVoltar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
     }
 }

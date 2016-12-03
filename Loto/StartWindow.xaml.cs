@@ -37,6 +37,11 @@ namespace Loto
             
         }
 
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            this.InitializeComponent();
+        }
+
         private async void buscarJogos()
         {
             Entity.Jogo lotoFacil = await buscarJogo("lotofacil");
@@ -47,24 +52,29 @@ namespace Loto
             Entity.Jogo duplaSena = await buscarJogo("duplasena");
         }
 
+        private void btnLotoFacil_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(UIJogo), EnumTipoJogo.TipoJogo.LOTOFACIL);
+        }
+
         private void btnLotoMania_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(UIJogo), EnumTipoJogo.TipoJogo.LOTOMANIA);
+            this.Frame.Navigate(typeof(UIJogo), EnumTipoJogo.TipoJogo.LOTOMANIA);
         }
 
         private void btnDuplaSena_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(UIJogo), EnumTipoJogo.TipoJogo.DUPLASENA);
+            this.Frame.Navigate(typeof(UIJogo), EnumTipoJogo.TipoJogo.DUPLASENA);
         }
 
         private void btnQuina_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(UIJogo), EnumTipoJogo.TipoJogo.QUINA);
+            this.Frame.Navigate(typeof(UIJogo), EnumTipoJogo.TipoJogo.QUINA);
         }
 
         private void btnTimeMania_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(UIJogo), EnumTipoJogo.TipoJogo.TIMEMANIA);            
+            this.Frame.Navigate(typeof(UIJogo), EnumTipoJogo.TipoJogo.TIMEMANIA);            
         }
 
         private async Task<Entity.Jogo> buscarJogo(string tipoJogo)
@@ -89,8 +99,6 @@ namespace Loto
             }
 
 
-        }
-
-        
+        }       
     }
 }
