@@ -97,6 +97,7 @@
     </Compile>
     <Compile Include="Entity\EnumTipoJogo.cs" />
     <Compile Include="Entity\Jogo.cs" />
+    <Compile Include="JsonWebClient.cs" />
     <Compile Include="StartWindow.xaml.cs">
       <DependentUpon>StartWindow.xaml</DependentUpon>
     </Compile>
