@@ -22,40 +22,46 @@ namespace Loto
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class UIJogo : Page
-    {        
+    {       
+        
         public UIJogo()
         {
             this.InitializeComponent();
         }
 
-        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
         {
             var tipoJogo = (EnumTipoJogo.TipoJogo)e.Parameter;
-           
+
             if (tipoJogo.Equals(EnumTipoJogo.TipoJogo.LOTOFACIL))
             {
                 lblNomeJogo.Text = "Lotofácil";
-            } else
+            }
+            else
             {
                 if (tipoJogo.Equals(EnumTipoJogo.TipoJogo.DUPLASENA))
                 {
                     lblNomeJogo.Text = "Duplasena";
-                } else
+                }
+                else
                 {
                     if (tipoJogo.Equals(EnumTipoJogo.TipoJogo.LOTOMANIA))
                     {
                         lblNomeJogo.Text = "Lotomania";
-                    } else
+                    }
+                    else
                     {
                         if (tipoJogo.Equals(EnumTipoJogo.TipoJogo.MEGASENA))
                         {
                             lblNomeJogo.Text = "Megasena";
-                        } else
+                        }
+                        else
                         {
                             if (tipoJogo.Equals(EnumTipoJogo.TipoJogo.QUINA))
                             {
                                 lblNomeJogo.Text = "Quina";
-                            } else
+                            }
+                            else
                             {
                                 lblNomeJogo.Text = "Timemania";
                             }
@@ -63,10 +69,8 @@ namespace Loto
                     }
                 }
             }
-            
-           
-
-        }
+            base.OnNavigatingFrom(e);
+        }       
 
         private void btnVoltar_Click(object sender, RoutedEventArgs e)
         {

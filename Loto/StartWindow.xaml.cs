@@ -99,6 +99,11 @@ namespace Loto
             }
 
 
-        }       
+        }
+
+        private void btnMegaSena_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(UIJogo), EnumTipoJogo.TipoJogo.MEGASENA);
+        }
     }
 }
