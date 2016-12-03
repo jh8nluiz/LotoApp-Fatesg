@@ -8,7 +8,7 @@
     xmlns:Charting="using:WinRTXamlToolkit.Controls.DataVisualization.Charting"
     mc:Ignorable="d">
 
-    <Grid Background="#2A95BF" VerticalAlignment="Top">
+    <Grid Background="#2A95BF" VerticalAlignment="Top" Height="717" Margin="1,0,0,0">
         <StackPanel>
             <Button x:Name="btnVoltar" Height="35" Width="38" Click="btnVoltar_Click">
                 <Button.Background>

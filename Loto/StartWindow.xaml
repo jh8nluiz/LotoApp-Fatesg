@@ -14,46 +14,61 @@
         </ResourceDictionary>
     </Page.Resources>
 
+
     <Grid Background="#2A95BF">
-        <StackPanel HorizontalAlignment="Left" Padding="100" Orientation="Horizontal" >
-            <StackPanel HorizontalAlignment="Left">
-                <TextBlock FontFamily="Segoe UI Light" FontSize="46" Margin="10,2,4,10" Foreground="White">Loterias</TextBlock>
-                <Grid Padding="30">
-                    <Grid.Background>
-                        <ImageBrush Stretch="Fill"/>
-                    </Grid.Background>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition />
-                        <RowDefinition />
-                        <RowDefinition />
-                    </Grid.RowDefinitions>
-                    <Button x:Name="btnLotoFacil" Grid.Column="0" Grid.Row="0" Height="92" Width="220" Margin="0,0,10,10" Style="{StaticResource EstiloLotoFacil}" Click="btnLotoFacil_Click"/>
-                    <Button x:Name="btnLotoMania" Grid.Column="0" Grid.Row="1" Height="92" Width="220" Margin="0,0,10,10" Style="{StaticResource EstiloLotoMania}" Click="btnLotoMania_Click"></Button>
-                    <Button x:Name="btnTimeMania" Grid.Column="0" Grid.Row="2" Height="92" Width="220" Margin="0,0,10,10" Style="{StaticResource EstiloTimeMania}" Click="btnTimeMania_Click"></Button>
-                    <Button x:Name="btnMegaSena" Grid.Column="1" Grid.Row="0" Height="92" Width="220" Margin="0,0,10,10" Style="{StaticResource EstiloMegaSena}" Click="btnMegaSena_Click"></Button>
-                    <Button x:Name="btnQuina" Grid.Column="1" Grid.Row="1" Height="92" Width="220" Margin="0,0,10,10" Style="{StaticResource EstiloQuina}" Click="btnQuina_Click"></Button>
-                    <Button x:Name="btnDuplaSena" Grid.Column="1" Grid.Row="2" Height="92" Width="220" Margin="0,0,10,10" Style="{StaticResource EstiloDuplaSena}" Click="btnDuplaSena_Click"></Button>
-                </Grid>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="720"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="ControleTela.Orientation" Value="Horizontal"/>                        
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <ScrollViewer x:Name="ScrolGeral" Visibility="Visible">
+            <StackPanel x:Name="ControleTela" HorizontalAlignment="Left" Padding="100" Orientation="Vertical" >
+                <StackPanel HorizontalAlignment="Left">
+                    <TextBlock FontFamily="Segoe UI Light" FontSize="46" Margin="10,2,4,10" Foreground="White">Loterias</TextBlock>
+                    <Grid Padding="30">
+                        <Grid.Background>
+                            <ImageBrush Stretch="Fill"/>
+                        </Grid.Background>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Button x:Name="btnLotoFacil" Grid.Column="0" Grid.Row="0" Height="92" Width="220" Margin="0,0,10,10" Style="{StaticResource EstiloLotoFacil}" Click="btnLotoFacil_Click"/>
+                        <Button x:Name="btnLotoMania" Grid.Column="0" Grid.Row="1" Height="92" Width="220" Margin="0,0,10,10" Style="{StaticResource EstiloLotoMania}" Click="btnLotoMania_Click"></Button>
+                        <Button x:Name="btnTimeMania" Grid.Column="0" Grid.Row="2" Height="92" Width="220" Margin="0,0,10,10" Style="{StaticResource EstiloTimeMania}" Click="btnTimeMania_Click"></Button>
+                        <Button x:Name="btnMegaSena" Grid.Column="1" Grid.Row="0" Height="92" Width="220" Margin="0,0,10,10" Style="{StaticResource EstiloMegaSena}" Click="btnMegaSena_Click"></Button>
+                        <Button x:Name="btnQuina" Grid.Column="1" Grid.Row="1" Height="92" Width="220" Margin="0,0,10,10" Style="{StaticResource EstiloQuina}" Click="btnQuina_Click"></Button>
+                        <Button x:Name="btnDuplaSena" Grid.Column="1" Grid.Row="2" Height="92" Width="220" Margin="0,0,10,10" Style="{StaticResource EstiloDuplaSena}" Click="btnDuplaSena_Click"></Button>
+                    </Grid>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left">
+                    <TextBlock FontFamily="Segoe UI Light" FontSize="46" Margin="10,2,4,10" Foreground="White">Jogos</TextBlock>
+                    <ScrollViewer Height="347">
+                        <ListView x:Name="JogosList" Width="440" Padding="30">
+                            <ListView.ItemTemplate>
+                                <DataTemplate x:DataType="x:String">
+                                    <StackPanel Orientation="Vertical" >
+                                        <TextBlock Text="{Binding TipoJogo}" FontSize="32" Foreground="White"/>
+                                        <TextBox Text="{Binding Resultado}" FontSize="25" Foreground="White" Width="410" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </ScrollViewer>
+                </StackPanel>
             </StackPanel>
-            <StackPanel HorizontalAlignment="Left">
-                <TextBlock FontFamily="Segoe UI Light" FontSize="46" Margin="10,2,4,10" Foreground="White">Jogos</TextBlock>
-                <ScrollViewer Height="347">
-                <ListView x:Name="JogosList" Width="440" Padding="30">
-                    <ListView.ItemTemplate>
-                        <DataTemplate x:DataType="x:String">
-                            <StackPanel Orientation="Vertical" >
-                                 <TextBlock Text="{Binding TipoJogo}" FontSize="32" Foreground="White"/>
-                                 <TextBox Text="{Binding Resultado}" FontSize="25" Foreground="White" Width="410" />
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-                </ScrollViewer>
-            </StackPanel>
-        </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>

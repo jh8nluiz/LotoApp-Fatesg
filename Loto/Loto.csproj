@@ -113,7 +113,9 @@
     <None Include="Exemplo1_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Images\IconeMenor.png" />
     <Content Include="Assets\Images\arrow.png" />
+    <Content Include="Assets\Images\IconeSegundo.png" />
     <Content Include="Assets\Images\imgButtonDuplaSena.png" />
     <Content Include="Assets\Images\imgButtonLotoFacil.png" />
     <Content Include="Assets\Images\imgButtonLotoMania.png" />
