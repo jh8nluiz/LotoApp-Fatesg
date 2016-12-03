@@ -41,6 +41,7 @@
             </StackPanel>
             <StackPanel HorizontalAlignment="Left">
                 <TextBlock FontFamily="Segoe UI Light" FontSize="46" Margin="10,2,4,10" Foreground="White">Jogos</TextBlock>
+                <ScrollViewer Height="347">
                 <ListView x:Name="JogosList" Width="440" Padding="30">
                     <ListView.ItemTemplate>
                         <DataTemplate x:DataType="x:String">
@@ -51,6 +52,7 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+                </ScrollViewer>
             </StackPanel>
         </StackPanel>
     </Grid>

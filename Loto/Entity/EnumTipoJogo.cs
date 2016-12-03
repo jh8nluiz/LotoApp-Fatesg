@@ -8,7 +8,7 @@ namespace Loto.Entity
 {
     class EnumTipoJogo
     {
-        enum TipoJogo
+        public enum TipoJogo
         {
             LOTOFACIL,
             MEGASENA,
@@ -16,6 +16,6 @@ namespace Loto.Entity
             QUINA,
             TIMEMANIA,
             DUPLASENA
-        }
+        };
     }
 }

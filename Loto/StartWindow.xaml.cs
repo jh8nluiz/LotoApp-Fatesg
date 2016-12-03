@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Loto.Entity;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -35,34 +36,34 @@ namespace Loto
         }
 
         private void btnLotoFacil_Click(object sender, RoutedEventArgs e)
-        {
-            buscarJogo("lotofacil");
+        {            
+            Frame.Navigate(typeof(UIJogo),EnumTipoJogo.TipoJogo.LOTOFACIL);
         }
 
        
         private void btnMegaSena_Click(object sender, RoutedEventArgs e)
-        {            
-            buscarJogo("megasena");
+        {
+            Frame.Navigate(typeof(UIJogo), EnumTipoJogo.TipoJogo.MEGASENA);
         }
 
         private void btnLotoMania_Click(object sender, RoutedEventArgs e)
         {
-            buscarJogo("lotomania");
+            Frame.Navigate(typeof(UIJogo), EnumTipoJogo.TipoJogo.LOTOMANIA);
         }
 
         private void btnDuplaSena_Click(object sender, RoutedEventArgs e)
         {
-            buscarJogo("duplasena");
+            Frame.Navigate(typeof(UIJogo), EnumTipoJogo.TipoJogo.DUPLASENA);
         }
 
         private void btnQuina_Click(object sender, RoutedEventArgs e)
         {
-            buscarJogo("quina");
+            Frame.Navigate(typeof(UIJogo), EnumTipoJogo.TipoJogo.QUINA);
         }
 
         private void btnTimeMania_Click(object sender, RoutedEventArgs e)
         {
-            buscarJogo("timemania");
+            Frame.Navigate(typeof(UIJogo), EnumTipoJogo.TipoJogo.TIMEMANIA);
         }
 
         private async void buscarJogo(string tipoJogo)
