@@ -25,7 +25,7 @@ namespace Loto
     {
         private JsonWebClient client = new JsonWebClient();
         private ObservableCollection<Entity.Jogo> listJogos = new ObservableCollection<Entity.Jogo>();
-        private string token = "SGBWpLfcyvUskNU";
+        private string token = "WxZdRtutLf8bTcE";
 
         public MainPage()
         {
