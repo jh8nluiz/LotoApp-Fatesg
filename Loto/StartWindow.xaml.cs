@@ -64,6 +64,7 @@ namespace Loto
         private void btnTimeMania_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(UIJogo), EnumTipoJogo.TipoJogo.TIMEMANIA);
+            Frame.Navigate(typeof(UIJogo), EnumTipoJogo.TipoJogo.TIMEMANIA);
         }
 
         private async void buscarJogo(string tipoJogo)
