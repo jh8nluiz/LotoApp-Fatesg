@@ -32,6 +32,9 @@ No quesito persistência foi utilizado o [SQlite .NET] pelo fato de ser simplifi
 ![alt text](https://s11.postimg.org/95m6npcqn/Screen_Shot_2016_12_03_at_12_16_59_AM.png "Página Principal - Resultados")
 ![alt text](https://s11.postimg.org/dg0ujahtr/Screen_Shot_2016_12_03_at_12_25_20_AM.png "Realização de Jogos")
 
+### Ícone
+![alt text](https://s12.postimg.org/d4j1m4tdp/Screen_Shot_2016_12_03_at_12_40_18_PM.png "Ícone Principal")
+
 ## Requisitos
 - [X] Listar os resultados mais recentes dos diversos tipos de jogos lotéricos
 - [X] Registrar jogos
