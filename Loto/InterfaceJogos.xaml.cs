@@ -29,7 +29,7 @@ namespace Loto
             this.InitializeComponent();
         }
 
-        protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             var tipoJogo = (EnumTipoJogo.TipoJogo)e.Parameter;
 
@@ -69,12 +69,11 @@ namespace Loto
                     }
                 }
             }
-            base.OnNavigatingFrom(e);
-        }       
+        }            
 
         private void btnVoltar_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainPage));
+            this.Frame.GoBack();
         }
     }
 }
